@@ -92,7 +92,7 @@ export class AppComponent {
     }
 
     loading(data: string) {
-        let items: Item[] = [];
+        /*let items: Item[] = [];
         let name: string;
         data.split("\"").forEach(element => {
             if(data.split("\"").indexOf(element) % 4 == 1) {
@@ -102,7 +102,9 @@ export class AppComponent {
                 items.push({name: name, year: element});
             }
         });
-        this.items = items;
+        this.items = items;*/
+        let obj = eval('(' + data + ')');
+        this.items = obj;
     }
 
     unloading() {
